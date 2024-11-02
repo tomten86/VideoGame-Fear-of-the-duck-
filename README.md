@@ -1,6 +1,6 @@
 # # Fear of the Duck
 
-A simple Python game where a child must escape from an evil duck. Developed using Python and the Pygame library.
+Welcome to **Fear of the Duck** – a thrilling Python game where you, a brave child, must escape from a mighty evil duck in a whimsical world that feels like heaven!
 
 ## Description
 
