@@ -1,0 +1,25 @@
+from PIL import Image, ImageDraw
+
+# Create a new image with transparency
+img = Image.new('RGBA', (50, 50), (0, 0, 0, 0))
+draw = ImageDraw.Draw(img)
+
+# Draw the duck's body
+draw.ellipse((5, 15, 45, 45), fill=(255, 255, 0))  # Yellow body
+
+# Draw the duck's head
+draw.ellipse((15, 5, 35, 25), fill=(255, 255, 0))  # Yellow head
+
+# Draw the beak
+draw.polygon([(35, 15), (50, 20), (35, 25)], fill=(255, 165, 0))  # Orange beak
+
+# Draw angry eye
+draw.ellipse((22, 12, 26, 16), fill=(255, 0, 0))  # Red eye
+draw.ellipse((24, 14, 25, 15), fill=(0, 0, 0))    # Black pupil
+
+# Draw angry eyebrow
+draw.line((20, 10, 27, 13), fill=(0, 0, 0), width=2)  # Slanted eyebrow
+
+# Save the image
+img.save('duck.png')
+print("duck.png created successfully!")

@@ -1,0 +1,28 @@
+from PIL import Image, ImageDraw
+
+# Create a new image with transparency
+img = Image.new('RGBA', (50, 50), (0, 0, 0, 0))
+draw = ImageDraw.Draw(img)
+
+# Draw the child's head
+draw.ellipse((15, 5, 35, 25), fill=(255, 224, 189))  # Skin color
+
+# Draw the body
+draw.rectangle((20, 25, 30, 45), fill=(0, 128, 255))  # Blue shirt
+
+# Draw the arms
+draw.line((20, 30, 10, 40), fill=(255, 224, 189), width=5)
+draw.line((30, 30, 40, 40), fill=(255, 224, 189), width=5)
+
+# Draw the legs
+draw.line((23, 45, 23, 55), fill=(0, 0, 0), width=5)
+draw.line((27, 45, 27, 55), fill=(0, 0, 0), width=5)
+
+# Draw the face
+draw.ellipse((22, 12, 24, 14), fill=(0, 0, 0))  # Left eye
+draw.ellipse((26, 12, 28, 14), fill=(0, 0, 0))  # Right eye
+draw.arc((22, 16, 28, 20), start=0, end=180, fill=(255, 0, 0))  # Smile
+
+# Save the image
+img.save('child.png')
+print("child.png created successfully!")
